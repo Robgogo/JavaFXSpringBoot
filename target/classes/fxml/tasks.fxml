@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="595.0" prefWidth="809.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.robgogo.controller.TaskController">
+   <children>
+      <VBox layoutX="71.0" layoutY="43.0" prefHeight="425.0" prefWidth="651.0">
+         <children>
+            <AnchorPane prefHeight="105.0" prefWidth="651.0">
+               <children>
+                  <Label layoutX="222.0" layoutY="44.0" prefHeight="40.0" prefWidth="139.0" text="Tasks">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="316.0" prefWidth="651.0">
+               <children>
+                  <TableView layoutX="149.0" layoutY="6.0" prefHeight="314.0" prefWidth="302.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="Id" />
+                      <TableColumn prefWidth="75.0" text="Task" />
+                        <TableColumn prefWidth="75.0" text="Date" />
+                        <TableColumn fx:id="colDelete" prefWidth="75.0" text="Delete">
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem fx:id="delete" mnemonicParsing="false" onAction="#deleteTask" text="Delete" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableColumn>
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Button fx:id="back" layoutX="353.0" layoutY="522.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="64.0" text="Back" />
+   </children>
+</AnchorPane>

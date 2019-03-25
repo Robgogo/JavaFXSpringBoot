@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.robgogo.controller.CreateTaskController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <VBox prefHeight="193.0" prefWidth="525.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="To Do Information" />
+            <TextField fx:id="task" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="300.0" promptText="Task">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="25.0" />
+               </VBox.margin>
+            </TextField>
+            <DatePicker fx:id="timeOfTask" prefHeight="25.0" prefWidth="300.0" promptText="Select Date">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="25.0" />
+               </VBox.margin>
+            </DatePicker>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="250.0">
+               <VBox.margin>
+                  <Insets left="100.0" right="25.0" top="25.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="cancel" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="62.0" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="100.0" top="7.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="saveTask" mnemonicParsing="false" onAction="#saveTask" prefHeight="25.0" prefWidth="63.0" styleClass="btnGreen" stylesheets="@../styles/Styles.css" text="Save" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="46.0" top="7.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="50.0" right="25.0" top="15.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
